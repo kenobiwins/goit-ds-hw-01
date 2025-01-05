@@ -49,7 +49,9 @@ def main() -> None:
                     print(f"{Color.TITLE.value}Good bye!")
                     break
                 case Command.HELLO:
-                    print(f"{Color.TITLE.value}How can I help you?")
+                    print(
+                        f"{Color.TITLE.value}How can I help you?\nType 'help' for instructions"
+                    )
                 case Command.ADD:
                     print(add_contact(args, book))
                 case Command.CHANGE:
