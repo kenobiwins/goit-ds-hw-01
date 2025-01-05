@@ -1,4 +1,4 @@
-# goit-core-hw-07 README
+# goit-ds-hw-01 README
 
 ## Setup Instructions
 
@@ -42,4 +42,14 @@ pip install -r requirements.txt
 - **Run script**:
   ```
   find . -type d -name "__pycache__" -exec rm -r {} +
+  ```
+
+### 6. Run with docker
+- **Build the Docker Image**:
+  ```
+  docker build -t cli-bot .
+  ```
+- **Run the Container**:
+  ```
+  docker run -it cli-bot 
   ```
