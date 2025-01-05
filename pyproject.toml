@@ -1,3 +1,27 @@
+[tool.poetry]
+name = "cli-bot"
+version = "0.1.0"
+description = ""
+authors = ["Maksym Sydorenko <maksym.sy96@gmail.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.13"
+black = "^24.10.0"
+click = "^8.1.8"
+isort = "^5.13.2"
+mypy-extensions = "^1.0.0"
+packaging = "^24.2"
+pathspec = "^0.12.1"
+platformdirs = "^4.3.6"
+colorama = "^0.4.6"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
 [tool.black]
 line-length = 88            # Maximum line length, aligns with PEP 8
 target-version = ["py38", "py39", "py310", "py311"]  # Specify Python versions your project supports
@@ -14,12 +38,3 @@ exclude = '''
   | dist
 )/
 '''
-
-[tool.isort]
-profile = "black"           # Match Black's style
-line_length = 88            # Keep line length consistent
-known_first_party = "my_project"  # Replace with your project's package name
-known_third_party = "django,flask,numpy,pandas"  # Add commonly used third-party libraries
-multi_line_output = 3       # Vertical hanging indent style
-include_trailing_comma = true
-skip = ["migrations"]       # Skip migrations folder (common in Django projects)
